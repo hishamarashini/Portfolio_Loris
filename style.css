@@ -269,6 +269,13 @@ span {
     min-width: 50%;
     color: white;
 }
+.film_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
 
 
 /**
@@ -417,6 +424,25 @@ span {
     width: 750px;
     object-fit: cover;
 }
+#topBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 50px; /* Place the button at the bottom of the page */
+    right: 30px;
+    width: 60px;            /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: var(--main-color); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  #topBtn:hover {
+    background-color: var(--bg-color); /* Add a dark-grey background on hover */
+}
 
 @media (max-width: 768px) {
     #menu-icon {
@@ -472,6 +498,9 @@ span {
 
     .portfolio-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .film_container {
+        flex-direction: column;
     }
 
 }
